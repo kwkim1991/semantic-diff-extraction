@@ -11,6 +11,8 @@ Local-first markdown wiki with AI-powered document delta analysis.
 
 ## Demo
 
+![AnalyzePanel — new facts vs. potential conflicts against Top-3 similar docs](docs/assets/front_capture_1.png)
+
 <video src="https://github.com/kwkim1991/semantic-diff-extraction/raw/main/docs/assets/quokka_record.mp4" controls width="720"></video>
 
 ## Quickstart

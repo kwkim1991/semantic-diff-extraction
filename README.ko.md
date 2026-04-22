@@ -11,6 +11,8 @@
 
 ## 데모
 
+![AnalyzePanel — Top-3 유사 문서 대비 new facts·potential conflicts](docs/assets/front_capture_1.png)
+
 <video src="https://github.com/kwkim1991/semantic-diff-extraction/raw/main/docs/assets/quokka_record.mp4" controls width="720"></video>
 
 ## 빠른 시작
