@@ -9,6 +9,10 @@
 - **AI docdelta** — `.txt` 를 업로드하면 순수 JS TF-IDF 로 워크스페이스 Top-3 유사 문서를 자동 선정하고, 모델이 기존 문서 대비 **new**(새 정보)와 **conflict**(충돌) 를 추출.
 - **AI 백엔드 3종 공존**: `mock`(결정론적 synthetic), `finetuned`(임의 HTTP 엔드포인트), **`vllm`**(OpenAI-호환 vLLM 서버 + `guided_json`).
 
+## 데모
+
+<video src="https://github.com/kwkim1991/semantic-diff-extraction/raw/main/docs/assets/quokka_record.mp4" controls width="720"></video>
+
 ## 빠른 시작
 
 ### 사전 요구사항
