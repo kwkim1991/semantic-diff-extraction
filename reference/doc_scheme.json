@@ -1,0 +1,87 @@
+{
+    "source_id": "{source_id}",
+    "instruction":"주어진 기존 문서들(known_docs)을 기준으로 신규 문서(new_doc)에서 다음을 추출하세요. new: 기존 문서들 어디에도 없는 새로운 내용. conflict: 기존 문서들 중 어느 하나와 충돌하는 내용. 기존 문서들에 이미 있는 내용이거나 단순 paraphrase는 출력하지 않습니다.",
+    "known_docs":[
+        [
+            {
+                "doc_id": "{context_id} ex. C0026301",
+                "context": "{context}"
+            },
+            {
+                "doc_id": "{context_id} ex. C0026302",
+                "context": "{context}"
+            },
+            {
+                "doc_id": "{context_id} ex. C0026303",
+                "context": "{context}"
+            }
+        ],
+        [
+            {
+                "doc_id": "{context_id} ex. C0026304",
+                "context": "{context}"
+            },
+            {
+                "doc_id": "{context_id} ex. C0026305",
+                "context": "{context}"
+            },
+            {
+                "doc_id": "{context_id} ex. C0026306",
+                "context": "{context}"
+            }
+        ],
+        [
+            {
+                "doc_id": "{context_id} ex. C0026307",
+                "context": "{context}"
+            },
+            {
+                "doc_id": "{context_id} ex. C0026308",
+                "context": "{context}"
+            }
+        ]
+    ],
+    "new_doc":[
+        {
+            "doc_id": "{context_id} ex. C0026309",
+            "context": "{context}"
+        },
+        {
+            "doc_id": "{context_id} ex. C0026310",
+            "context": "{context}"
+        }
+    ],
+    "convert_doc":[
+        {
+            "doc_id": "{context_id} ex. known_docs randomly shuffled 1",
+            "context": "{context}"
+        },
+        {
+            "doc_id": "{context_id} ex. known_docs randomly shuffled 2",
+            "context": "{context}"
+        }
+    ],
+    "output":{
+        "new":[
+            "배경: 문서 수동 분류에 연간 8,000 man-hour 투입",
+            "기술 스택: OpenAI API + 사내 벡터 DB",
+            "기대 효과: 분류 업무 70% 자동화, 연 3억원 인건비 절감"
+        ],
+        "conflict":[
+            {
+                "doc_id": "{context_id} ex. known_docs randomly shuffled 1",
+                "known_text":"(LLM생성예정)known_docs의 conflict 데이터 구간",
+                "new_text":"(LLM생성예정)new_doc의 conflict 데이터 구간",
+                "reason":"(LLM생성예정)conflict 이유 설명",
+                "severity": "(LLM생성예정)low/medium/high"
+            },
+            {
+                "doc_id": "{context_id} ex. known_docs randomly shuffled 2",
+                "known_text":"(LLM생성예정)known_docs의 conflict 데이터 구간",
+                "new_text":"(LLM생성예정)new_doc의 conflict 데이터 구간",
+                "reason":"(LLM생성예정)conflict 이유 설명",
+                "severity": "(LLM생성예정)low/medium/high"
+            }
+        ]
+    }
+}

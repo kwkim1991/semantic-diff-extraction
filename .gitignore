@@ -1,0 +1,94 @@
+# ---------------------------------------------------------------------------
+# Wiki Workspace — repo-wide .gitignore
+#
+# Guideline: we keep SOURCE (code, docs, contracts) and ignore DATA (models,
+# checkpoints, datasets over a few MB), RUNTIME (venvs, node_modules, caches),
+# and SECRETS (.env). Sub-package .gitignore files (backend/.gitignore) stack
+# on top of this one.
+# ---------------------------------------------------------------------------
+
+# --- Secrets ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# --- Logs ------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Claude Code local settings -------------------------------------------
+.claude/settings.local.json
+
+# ===========================================================================
+# Node / Frontend
+# ===========================================================================
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+.turbo/
+.next/
+*.tsbuildinfo
+
+# ===========================================================================
+# Python / Backend
+# ===========================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+*.egg-info/
+.eggs/
+
+# ===========================================================================
+# train/ — massive model / data artifacts (hundreds of GB).
+# Keep source code (train/finetune/**, train/src/**, train/scripts/**,
+# train/docker/**, train/serve_vllm_*.sh) and the single upstream copy in
+# reference/doc_scheme.json. Everything else under train/ is ignored.
+# ===========================================================================
+train/hf_models/
+train/exports/
+train/checkpoints/
+train/tmp/
+train/nemo_experiments/
+train/output/
+train/venv/
+train/data/
+train/bak/
+
+# Nested Python caches / venvs inside train/ (in case they reappear)
+train/**/__pycache__/
+train/**/.venv/
+
+# ===========================================================================
+# reference/train-validation-dataset — large JSONL corpora (74 MB total).
+# The API contract itself (reference/doc_scheme.json) is kept.
+# Remove these lines if you want the datasets versioned (Git LFS recommended).
+# ===========================================================================
+reference/train-validation-dataset/
+
+# ===========================================================================
+# Harness workspace artifacts — intermediate orchestrator dumps, not product.
+# _workspace/ (current run) is small and sometimes referenced by code/docs;
+# _workspace_prev/ is archived snapshots.
+# ===========================================================================
+_workspace_prev/
+# _workspace/         # uncomment to also ignore the current run's artifacts
