@@ -2,6 +2,8 @@
 
 > **한국어 버전:** [README.ko.md](README.ko.md)
 
+![AnalyzePanel — new facts vs. potential conflicts against Top-3 similar docs](docs/assets/front_capture_1.png)
+
 Local-first markdown wiki with AI-powered document delta analysis.
 
 - **Zero-setup** — first launch seeds 10 sample documents, everything persists to `localStorage`. No login, no server required to start.
@@ -10,8 +12,6 @@ Local-first markdown wiki with AI-powered document delta analysis.
 - Three interchangeable AI backends: `mock` (deterministic synthetic), `finetuned` (your HTTP endpoint), **`vllm`** (OpenAI-compatible vLLM server with `guided_json`).
 
 ## Demo
-
-![AnalyzePanel — new facts vs. potential conflicts against Top-3 similar docs](docs/assets/front_capture_1.png)
 
 <video src="https://github.com/kwkim1991/semantic-diff-extraction/raw/main/docs/assets/quokka_record.mp4" controls width="720"></video>
 

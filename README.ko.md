@@ -2,6 +2,8 @@
 
 > **English version:** [README.md](README.md)
 
+
+![AnalyzePanel — Top-3 유사 문서 대비 new facts·potential conflicts](docs/assets/front_capture_1.png)
 로컬 우선(local-first) 마크다운 위키 + AI 기반 문서 delta(새 정보·충돌) 추출.
 
 - **Zero-setup** — 첫 실행 시 샘플 문서 10건이 시드되고, 전부 `localStorage` 에 영속. 로그인도 서버도 없이 즉시 동작.
@@ -11,7 +13,7 @@
 
 ## 데모
 
-![AnalyzePanel — Top-3 유사 문서 대비 new facts·potential conflicts](docs/assets/front_capture_1.png)
+
 
 <video src="https://github.com/kwkim1991/semantic-diff-extraction/raw/main/docs/assets/quokka_record.mp4" controls width="720"></video>
 
