@@ -9,6 +9,10 @@ Local-first markdown wiki with AI-powered document delta analysis.
 - **AI docdelta** — upload a new `.txt`, the app picks the top-3 most similar workspace docs via pure-JS TF-IDF, and a model extracts `new` facts and `conflict` pairs against what you already know.
 - Three interchangeable AI backends: `mock` (deterministic synthetic), `finetuned` (your HTTP endpoint), **`vllm`** (OpenAI-compatible vLLM server with `guided_json`).
 
+## Demo
+
+<video src="https://github.com/kwkim1991/semantic-diff-extraction/raw/main/docs/assets/quokka_record.mp4" controls width="720"></video>
+
 ## Quickstart
 
 ### Prerequisites
