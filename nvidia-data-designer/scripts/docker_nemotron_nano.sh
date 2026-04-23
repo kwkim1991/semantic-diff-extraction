@@ -1,0 +1,3 @@
+hf download nvidia/nvidia-nemotron-3-nano-4b-bf16 --local-dir=/home/shadeform/workspace
+
+docker run -d   --name vllm-server --restart unless-stopped   --gpus all   --ipc host   -p 5000:8000   -v "/home/shadeform/workspace:/models"   -v "$HOME/.cache/huggingface:/root/.cache/huggingface"   vllm/vllm-openai:latest   --model /models   --served-model-name vllmlora   --host 0.0.0.0   --port 8000   --trust-remote-code   --gpu-memory-utilization 0.85
